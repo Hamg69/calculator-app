@@ -1,29 +1,36 @@
-function checkHistory() {
-	return document.getElementById("history-values").innerText;
+function calculate() {
+    
+    document.querySelectorAll(".num").forEach(item => {
+        item.addEventListener("click", function(){
+            document.getElementById("output").textContent += item.value;
+        })
+    })
+    document.querySelectorAll(".operator").forEach(item => {
+        item.addEventListener("click", function(){
+            document.getElementById("output").textContent += " " + item.value + " ";
+        })
+    })
+    document.getElementsByClassName("equal")[0].addEventListener("click", function(){
+        document.getElementById("history").classList.add("blur")
+        document.getElementById("history").textContent = document.getElementById("output").textContent;
+        let checkPercent = document.getElementById("history").textContent.replace("%","")
+        document.getElementById("output").textContent = 
+        document.getElementById("history").textContent.includes("%")?
+        eval(checkPercent/100):
+        eval(document.getElementById("history").textContent)
+    })
 }
+calculate()
 
-function printHistory(fig) {
-	document.getElementById("history-values").innerText = fig;
+function clearOutput(){
+    document.getElementsByClassName("clear")[0].addEventListener("click", function(){
+        document.getElementById("history").textContent = ""
+        document.getElementById("output").textContent = ""
+    })
+    document.getElementsByClassName("delete")[0].addEventListener("click", function(){
+        let output = document.getElementById("output").textContent
+        output = output.substring(0, output.length-1)
+        document.getElementById("output").textContent = output;
+    })
 }
-function checkOutput() {
-	return document.getElementById("output-values").innerText;
-}
-
-function printOutput(fig){
-	if(fig=="") {
-		document.getElementById("output-values").innerText = fig;
-	}
-	else{
-		document.getElementById("output-values").innerText = getFormattedNumber(fig);
-	}
-}
-function getFormattedNumber(fig) {
-	let n = Number(fig); 
-	let value = n.toLocaleString("en");
-	return value;
-}
-printOutput("4765487");
-function reverseNumberFormat(fig){
-	return Number(fig.replace(/,/g,""))
-};
-alert(reverseNumberFormat(getOutput()));
+clearOutput()

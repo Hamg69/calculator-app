@@ -5,38 +5,48 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h2>Simple Calculator</h2>
-	<div id="container"></div>
-	<div id="calculator">
+	<h2>Calculator App</h2>
+	<div id="container">
 	<div id="result">
-		<div id="history">
-			<p id="history-values">2+2</p>
-		</div>
-		<div id="output">
-		<p id="output-values">4</p> 
-		</div>
+		<p id="history"></p>
+		<p id="output"></p> 
 	</div>
-	<div id="keboard">
-		<button id="clear" class="operator">C</button>
-		<button id="backspace" class="operator">CE</button>
-		<button id="%" class="operator">%</button>
-		<button id="/" class="operator">&#247</button>
-		<button id="7" class="number">7</button>
-		<button id="8" class="number">8</button>
-		<button id="9" class="number">9</button>
-		<button id="*" class="operator">&times</button>
-		<button id="4" class="number">4</button>
-		<button id="5" class="number">5</button>
-		<button id="6" class="number">6</button>
-		<button id="-" class="operator">-</button>
-		<button id="1" class="number">1</button>
-		<button id="2" class="number">2</button>
-		<button id="3" class="number">3</button>
-		<button id="+" class="operator">+</button>
-		<button id="empty" class="empty"></button>
-		<button id="0" class="number"></button>
-		<button id="empty" class="empty"></button>
-		<button id="=" class="operator">=</button>
+	<div id="keyboard">
+		<table class="cart-table" cellpadding="" cellspacing="">
+			<thead>
+				<tr>
+					<th class="btn"><input type="button" value="C" class="enlarge clear"/></th>
+					<th class="btn"><input type="button" value="CE" class="delete"/></th>
+					<th class="btn"><input type="button" value="%" class="enlarge operator"/></th>
+					<th class="btn"><input type="button" value="/" class="more operator"/></th>
+				</tr>
+			</thead>
+			<tbody id="">
+				<tr class="">
+					<td class="btn"><input type="button" value="7" class="display num"/></td>
+					<td class="btn"><input type="button" value="8" class="align display num"/></td>
+					<td class="btn"><input type="button" value="9" class="display num"/></td>
+					<td class="btn"><input type="button" value="*" class="more operator"/></td>
+				</tr>
+				<tr class="">
+					<td class="btn"><input type="button" value="4" class="display num"/></td>
+					<td class="btn"><input type="button" value="5" class="align display num"/></td>
+					<td class="btn"><input type="button" value="6" class="display num"/></td>
+					<td class="btn"><input type="button" value="-" class="more operator"/></td>
+				</tr>
+				<tr class="">
+					<td class="btn"><input type="button" value="1" class="display num"/></td>
+					<td class="btn"><input type="button" value="2" class="align display num"/></td>
+					<td class="btn"><input type="button" value="3" class="display num"/></td>
+					<td class="btn"><input type="button" value="+" class="enlarge operator"/></td>
+				</tr>
+				<tr class="">
+					<td class="btn"><input type="button" value="0" class="display num"/></td>
+					<td class="btn"><input type="button" value="." class="num dot"/></td>
+					<td colspan="2" class="end btn"><input type="button" value="=" class="enlarge equal"/></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>
 <script type="text/javascript" src="script.js">	

@@ -1,102 +1,81 @@
+
 body{
-	font-family: 'Open Sans', Sans-serif;
-	background-color: gray;
-	background-image: url("background.jpg");
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9e7ca3;
 }
-
-h2{
-	color: black;
-}
-
-#container{
-	width: 1000px;
-	height: 50px;
-	background-image: url("background.jpg");
-	margin: 20px auto;
-}
-
-#calculator{
-	width: 320px;
-	height: 520px;
-	background-color: gray;
-	margin: 0 auto;
-	top: 20px;
-	position: relative;
-	border-radius: 5px;
-}
-
+/* Output Section */
 #result{
-	height: 120px;
+    padding: 0.3em;
+    display: flex;
+    flex-flow: column;
 }
-
-#history{
-	text-align: right;
-	height: 30px;
-	margin: 0 20px;
-	padding-top: 20px;
-	font-size: 15px;
-	color: black;
-}
-
 #output{
-	text-align: right;
-	height: 70px;
-	margin: 10px 20px;
-	font-size: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0.15em;
+    padding: 0em 0.3em 0em 0.3em;
+    font-weight: bolder;
+    max-width:18em;
+}
+#history{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0.15em;
+    padding: 0em 0.3em 0em 0.3em;
+    font-weight: bolder;
+}
+.blur{
+    color:dimgray;
 }
 
+
+/* Table Section */
 #keyboard{
-	height: 430px;
+    background-color: #7c7fa3;
+}
+.enlarge{
+    font-size: 1.1em;
+    padding: 1.5em 1.6em;
+    font-weight: bolder;
+}
+.delete{
+    font-size: 1.1em;
+    padding: 1.5em 1.3em;
+    font-weight: bolder;
+}
+.display{
+    padding: 1.8em 2em;
+    font-size: 1em;
+    font-weight: bolder;
+}
+.end{
+    text-align: center;
+}
+.equal{
+    padding: 1.5em 3.8em;
+}
+.dot{
+    padding: 1.25em 1.65em;
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+.align{
+    padding: 1.8em 2em;
+}
+.btn{
+    padding: 0em;
+}
+.more{
+    padding: 1em 1.25em;
+    font-weight: bolder;
+    font-size: 1.5em;
 }
 
-.operator, .number, .empty{
-	width: 50px;
-	height: 50px;
-	margin: 15px;
-	float: left;
-	border-radius: 50px;
-	border-width: 0px;
-	font-weight: bold;
-	font-size: 15px;
-}
 
-.number, .empty{
-	background-color: inherit;
-}
-
-.number, .operator{
-	cursor: pointer;
-}
-
-.operator:active, .number:active{
-	font-size: 12px;
-}
-
-.operator:focus, .number:focus, .empty:focus{
-	outline: 0;
-}
-
-button:nth-child(4){
-	font-size: 20px;
-	background-color: green;
-}
-
-button:nth-child(8){
-	font-size: 20px;
-	background-color: orange;
-}
-
-button:nth-child(12){
-	font-size: 20px;
-	background-color: pink;
-}
-
-button:nth-child(16){
-	font-size: 20px;
-	background-color: blue;
-}
-
-button:nth-child(20){
-	font-size: 20px;
-	background-color: #10a2fa;
-}
